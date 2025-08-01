@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Felicidades</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="heart"></canvas>
+ <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+<div id="tap-to-start">Tócame</div>
+
+   <audio id="bg-music" loop>
+  <source src="fuimos.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+document.addEventListener('click', function () {
+    const audio = document.getElementById('bg-music');
+    const tapText = document.getElementById('tap-to-start');
+    if (audio.paused) {
+        audio.play().catch(() => {});
+        tapText.style.display = 'none';
+    }
+}, { once: true });
+</script>
+   <script src="script.js"></script>
+</body>
+</html>
